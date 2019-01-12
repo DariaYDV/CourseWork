@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ComputersDBCW.Models.Computers>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Computers</h3>
+    <table>
+        <tr class="header">
+            <td><p>Index</p></td>
+            <td><p>Model </p></td>
+            <td><p>Price </p></td>
+            <td><p>CPU </p></td>
+            <td><p>RAM</p></td>
+            <td></td>
+        </tr>
+        @foreach (ComputersDBCW.Models.Computers b in Model)
+        {
+            <tr>
+                <td><p>@b.Model</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p>@b.CPU</p></td>
+                <td><p>@b.RAM</p></td>
+                <td><p><a href="/Home/Buy/@b.Index">Buy</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
+
+

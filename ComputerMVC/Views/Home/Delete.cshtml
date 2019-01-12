@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ComputersDBCW.Models.Computers
+<h2>Delete</h2>
+<dl>
+    <dt>Model</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Model)
+    </dd>
+
+    <dt>Price</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Price)
+    </dd>
+
+    <dt>CPU</dt>
+    <dd>
+        @Html.DisplayFor(model => model.CPU)
+    </dd>
+    <dt>RAM</dt>
+    <dd>
+        @Html.DisplayFor(model => model.RAM)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}

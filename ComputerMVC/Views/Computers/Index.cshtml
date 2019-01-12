@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ComputersDBCW.Models.Computers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RAM)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAM)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Index }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Index }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Index })
+        </td>
+    </tr>
+}
+
+</table>

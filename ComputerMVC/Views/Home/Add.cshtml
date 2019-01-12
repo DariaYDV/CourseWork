@@ -1,0 +1,28 @@
+﻿@model ComputersDBCW.Models.Computers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Model, "Model")
+    <br />
+    @Html.EditorFor(model => model.Model)
+    <br /><br />
+    @Html.LabelFor(model => model.Price, "Price")
+    <br />
+    @Html.EditorFor(model => model.Price)
+    <br /><br />
+    @Html.LabelFor(model => model.CPU, "CPU")
+    <br />
+    @Html.EditorFor(model => model.CPU)
+    <br /><br />
+    @Html.LabelFor(model => model.RAM, "RAM")
+    <br />
+    @Html.EditorFor(model => model.RAM)
+    <br /><br />
+    <input type="submit" value="Add" />
+}

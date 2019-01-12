@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ComputersDBCW.Models.Computers
+<h2>Computer @Model.Index</h2>
+@using (Html.BeginForm("EditComputer", "Home", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Index)
+        <p>
+            @Html.LabelFor(m => m.Model, "Model")
+            <br />
+            @Html.EditorFor(m => m.Model)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Price, "Price")
+            <br />
+            @Html.EditorFor(m => m.Price)
+
+        </p>
+        <p>
+            @Html.LabelFor(m => m.CPU, "CPU")
+            <br />
+            @Html.EditorFor(m => m.CPU)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.RAM, "RAM")
+            <br />
+            @Html.EditorFor(m => m.RAM)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}
