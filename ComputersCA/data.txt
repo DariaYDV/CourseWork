@@ -1,4 +1,4 @@
 [iIndex = 0, iModel = Asus, iPrice = 13800,9, iCPU = Intel, iRAM = 8]
 [iIndex = 1, iModel = Asus, iPrice = 15734, iCPU = Intel, iRAM = 8]
 [iIndex = 2, iModel = Asus, iPrice = 13455, iCPU = Intel, iRAM = 8]
-[iIndex = 2, iModel = Asus, iPrice = 12341,9, iCPU = Intel, iRAM = 4]
+[iIndex = 3, iModel = Dell, iPrice = 12900, iCPU = Intel , iRAM = 4]
